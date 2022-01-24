@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Asmaa Mahmoud</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logos/a-m-logo.png" />
+
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header class="page__header">
+      <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list"></ul>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Main -->
+    <main>
+      <!-- Start About Section -->
+      <section id="section1" data-nav="About" class="your-active-class">
+        <div class="landing__container">
+          <div class="flex__container">
+            <div class="about__info">
+              <div class="about__intro">
+                <div class="about__intro__detail">
+                  <p class="about__greeting">Hello!</p>
+                  <h1 class="about__name"><span>I'm</span> Asmaa Mahmoud</h1>
+                  <p class="about__job-title">Front-end Engineer</p>
+                </div>
+
+                <div class="personal-image">
+                  <picture>
+                    <source
+                      media="(min-width:700px)"
+                      srcset="assets/img/asmaa-2x.png"
+                    />
+                    <source
+                      media="(min-width:320px)"
+                      srcset="assets/img/asmaa-1x.png"
+                    />
+                    <img src="assets/img/asmaa-1x.png" alt="" />
+                  </picture>
+                </div>
+              </div>
+
+              <p class="about__description">
+                Passionate about great technologies in Front-end Development.
+                Eagerness to learn new technologies. Dedicated, Dependable and
+                positive team member who has strong technical, communication.
+              </p>
+
+              <a
+                class="about__info__link"
+                href="https://drive.google.com/file/d/1JwPQcTBlE_xgHq5hD_X1T8eAeR_OQGkO/view?usp=sharing"
+                target="_blank"
+                >Download Resume</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- Start Skills Section -->
+      <section id="section2" data-nav="Skills">
+        <div class="landing__container">
+          <h2>Skills</h2>
+
+          <div class="flex__container">
+            <div class="skill">
+              <img src="assets/logos/html5.svg" alt="" />
+              <p>HTML</p>
+            </div>
+
+            <div class="skill">
+              <img src="assets/logos/css3.svg" alt="" />
+              <p>CSS</p>
+            </div>
+
+            <div class="skill">
+              <img src="assets/logos/javascript.svg" alt="" />
+              <p>JavaScript</p>
+            </div>
+
+            <div class="skill">
+              <img src="assets/logos/typescript.svg" alt="" />
+              <p>TypeScript</p>
+            </div>
+
+            <div class="skill">
+              <img src="assets/logos/angular.svg" alt="" />
+              <p>Angular</p>
+            </div>
+
+            <div class="skill">
+              <img src="assets/logos/sass.svg" alt="" />
+              <p>Sass - SCSS</p>
+            </div>
+
+            <div class="skill">
+              <img src="assets/logos/bootstrap.svg" alt="" />
+              <p>Bootstrap</p>
+            </div>
+
+            <div class="skill">
+              <img src="assets/logos/tailwindcss.svg" alt="" />
+              <p>Tailwind CSS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Skills Section -->
+
+      <!-- Start Projects Section -->
+      <section id="section3" data-nav="Projects">
+        <div class="landing__container">
+          <h2>Projects</h2>
+          <div class="flex__container">
+            <div class="project">
+              <a
+                href="https://clipboard-landing-page-amber-five.vercel.app/"
+                target="_blank"
+                class="project-demo__link"
+              >
+                <img src="assets/img/project1.png" alt="project 1" />
+              </a>
+              <p>Clipboard Landing Page</p>
+              <a
+                href="https://github.com/AsmaaMK/Clipboard-landing-page"
+                target="_blank"
+                class="project-code__link"
+                >Code</a
+              >
+            </div>
+
+            <div class="project">
+              <a
+                href="https://responsiv-landing-page-asmaamk.vercel.app/"
+                target="_blank"
+                class="project-demo__link"
+              >
+                <img src="assets/img/project2.png" alt="project 1" />
+              </a>
+              <p>Clipboard Landing Page</p>
+              <a
+                href="https://github.com/AsmaaMK/SM-Experts"
+                target="_blank"
+                class="project-code__link"
+                >Code</a
+              >
+            </div>
+            <div class="project">
+              <a
+                href="https://clipboard-landing-page-amber-five.vercel.app/"
+                target="_blank"
+                class="project-demo__link"
+              >
+                <img src="assets/img/project1.png" alt="project 1" />
+              </a>
+              <p>Clipboard Landing Page</p>
+              <a
+                href="https://github.com/AsmaaMK/Clipboard-landing-page"
+                target="_blank"
+                class="project-code__link"
+                >Code</a
+              >
+            </div>
+            <div class="project">
+              <a
+                href="https://clipboard-landing-page-amber-five.vercel.app/"
+                target="_blank"
+                class="project-demo__link"
+              >
+                <img src="assets/img/project1.png" alt="project 1" />
+              </a>
+              <p>Clipboard Landing Page</p>
+              <a
+                href="https://github.com/AsmaaMK/Clipboard-landing-page"
+                target="_blank"
+                class="project-code__link"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Projects Section -->
+
+      <!-- Start Contact Me Section -->
+      <section id="section4" data-nav="Contact Me">
+        <div class="landing__container">
+          <h2>Contact Me</h2>
+          <div class="flex__container">
+            <form action="https://formspree.io/f/moqrjbge" method="POST">
+              <div class="name-field">
+                <input type="text" id="name" name="Name" value="" required />
+                <label for="name">Name</label>
+              </div>
+              <div class="email-field">
+                <input type="email" id="email" name="Email" value="" required />
+                <label for="email">Email</label>
+              </div>
+              <div class="message-field">
+                <textarea
+                  id="message"
+                  name="Subject"
+                  value=""
+                  required
+                ></textarea>
+                <label for="message">Message</label>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Me Section -->
+    </main>
+    <!-- End Main -->
+
+    <!-- Start Footer -->
+    <footer class="page__footer">
+      <ul class="social-links">
+        <li><a href="https://www.linkedin.com/in/asmaa-m-khalaf-04688a18b/" target="_blank"><img id="linkedin-icon" src="assets/logos/linkedin-icon.svg" alt="linkedin"></a></li>
+        <li><a href="https://github.com/AsmaaMK" target="_blank"><img src="assets/logos/icons8-github.svg" alt="github"></a></li>
+      </ul>
+      <p>&copy 2022 Asmaa Mahmoud</p>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
