@@ -171,19 +171,30 @@ sectionOneObserver.observe(sectionOne);
 
 /* form focus state */
 
-var inputs = document.getElementsByTagName('input');
+const inputs = document.getElementsByTagName('input');
 
 for (var i = 0; i < inputs.length; i++) {
-  var input = inputs[i];
+  const input = inputs[i];
   input.addEventListener('input', function() {
     this.value ? this.classList.add('notempty'): this.classList.remove('notempty');
 
   });
 }
 
-
-var textarea = document.getElementsByTagName('textarea')[0];
+const textarea = document.getElementsByTagName('textarea')[0];
 
 textarea.addEventListener('input', function() {
   this.value ? this.classList.add('notempty'): this.classList.remove('notempty');
+});
+
+
+/* reset form after submission */
+
+const submitbtn = document.getElementById('submitbtn');
+
+submitbtn.addEventListener('click', () => {
+  const form = document.getElementsByTagName('form')[0];
+  form.submit();
+  form.reset();
+  return false;
 });
