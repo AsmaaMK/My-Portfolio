@@ -153,9 +153,9 @@ section .landing__container .flex__container {
 /* Medium Screens */
 @media only screen and (min-width: 700px) {
   section .landing__container .flex__container {
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     margin: 0 5vw;
   }
 }
@@ -327,6 +327,7 @@ h2 {
 form button {
   display: inline-block;
   position: relative;
+  outline: none;
 
   font-size: 1rem;
   text-decoration: none;
@@ -451,8 +452,14 @@ form button:focus {
 /* ---- Projects section end ---- */
 
 #section3 .landing__container .flex__container {
-  justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
+}
+
+@media only screen and (min-width: 700px) {
+  #section3 .landing__container .flex__container {
+    justify-content: space-around;
+    align-items: stretch;
+  }
 }
 
 .project {
@@ -532,6 +539,7 @@ form button:focus {
 
 #section4 .flex__container {
   justify-content: center;
+  align-items: center;
 }
 
 form {
@@ -563,7 +571,7 @@ form textarea {
 
 form textarea {
   height: 10em;
-  padding: 1.5em 1.3em;
+  padding: 1.8em 1.3em;
 }
 
 form .name-field,
@@ -593,6 +601,7 @@ form textarea:focus + label {
 form input:focus + label,
 form textarea:focus + label {
   color: var(--dark-color);
+  font-weight: bold;
 }
 
 form input:focus,
@@ -615,19 +624,31 @@ form button {
 /* ---- footer start ---- */
 
 footer .social-links li a img {
-  width: 10vw;
-  max-width: 50px;
+  width: 100%;
 }
 
 footer .social-links li a {
-  display: inline-block;
+  display: block;
+  max-width: 50px;
+  max-height: 50px;
+  width: 10vw;
+  height: 10vw;
+
   margin: 1em 1em 1em 0;
   transition: 0.3s ease-in-out all;
+  outline: none;
+  border-radius: 50px;
+  background-color: #fff;
 }
 
-footer .social-links li a:hover {
+footer .social-links li a:hover,
+footer .social-links li a:focus {
   opacity: 0.8;
   transform: translateY(-0.2em);
+}
+
+footer .social-links li a:focus {
+  box-shadow: 0 0 0.5em var(--light-color);
 }
 
 footer .social-links {
@@ -642,12 +663,6 @@ footer {
   justify-content: space-around;
   align-items: center;
   padding: 0 2vw;
-}
-
-#linkedin-icon {
-  background-color: #fff;
-  border-radius: 500px;
-  border: none;
 }
 
 @media only screen and (min-width: 700px) {

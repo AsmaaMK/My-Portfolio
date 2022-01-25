@@ -150,7 +150,7 @@ const nav = document.getElementById("navbar__list");
 const sectionOne = document.getElementById("section1");
 
 const sectionOneOptions = {
-  rootMargin: "-400px 0px 0px 0px",
+  rootMargin: "-670px 0px 0px 0px",
 };
 
 const sectionOneObserver = new IntersectionObserver(function (entries) {
