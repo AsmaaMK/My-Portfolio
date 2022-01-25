@@ -153,9 +153,7 @@ const sectionOneOptions = {
   rootMargin: "-400px 0px 0px 0px",
 };
 
-const sectionOneObserver = new IntersectionObserver(function (
-  entries
-) {
+const sectionOneObserver = new IntersectionObserver(function (entries) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
       nav.classList.add("nav-scrolled");
@@ -163,38 +161,37 @@ const sectionOneObserver = new IntersectionObserver(function (
       nav.classList.remove("nav-scrolled");
     }
   });
-},
-sectionOneOptions);
+}, sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
 
-
 /* form focus state */
 
-const inputs = document.getElementsByTagName('input');
+const inputs = document.getElementsByTagName("input");
 
 for (var i = 0; i < inputs.length; i++) {
   const input = inputs[i];
-  input.addEventListener('input', function() {
-    this.value ? this.classList.add('notempty'): this.classList.remove('notempty');
-
+  input.addEventListener("input", function () {
+    this.value
+      ? this.classList.add("notempty")
+      : this.classList.remove("notempty");
   });
 }
 
-const textarea = document.getElementsByTagName('textarea')[0];
+const textarea = document.getElementsByTagName("textarea")[0];
 
-textarea.addEventListener('input', function() {
-  this.value ? this.classList.add('notempty'): this.classList.remove('notempty');
+textarea.addEventListener("input", function () {
+  this.value
+    ? this.classList.add("notempty")
+    : this.classList.remove("notempty");
 });
-
 
 /* reset form after submission */
 
-const submitbtn = document.getElementById('submitbtn');
-
-submitbtn.addEventListener('click', () => {
-  const form = document.getElementsByTagName('form')[0];
-  form.submit();
-  form.reset();
-  return false;
+const form = document.getElementsByTagName("form")[0];
+form.addEventListener("submit", (e) => {
+  setTimeout(() => {
+    form.reset();
+  }, 100);
+  return true;
 });
