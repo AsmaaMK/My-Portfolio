@@ -4,6 +4,7 @@
  */
 const navList = document.getElementById("navbar__list");
 const sections = document.getElementsByTagName("section");
+const anchorTags = document.getElementsByClassName("menu__link");
 const fregNavList = document.createDocumentFragment();
 const scrollBtn = document.getElementById("scroll-btn");
 const hamburgerIcon = document.getElementById("hamburger-icon");
@@ -27,15 +28,15 @@ let lastScrollTop = 0;
  * @param {string} sectionId
  * @returns {Node} list item
  */
-function createNavElement(secName) {
+function createNavElement(secName, sectionId) {
   const navElement = document.createElement("li");
   const anchorTag = document.createElement("a");
   navElementCount++;
 
   anchorTag.setAttribute("id", "anchor" + navElementCount);
+  anchorTag.setAttribute("href", `#${sectionId}`);
   anchorTag.classList.add("menu__link");
   anchorTag.textContent = secName;
-  anchorTag.style.cursor = "pointer";
 
   navElement.appendChild(anchorTag);
 
@@ -98,6 +99,9 @@ onscroll = function () {
       scrollPoss >= section.offsetTop - 100 &&
       scrollPoss <= section.offsetTop - 200 + section.offsetHeight
     ) {
+      for (let anchor of anchorTags) {
+        anchor.classList.add("unfocus");
+      }
       activateSection(section);
     }
   }
@@ -115,6 +119,7 @@ buildNavBar(sections);
 // Scroll to section on link click
 navList.addEventListener("click", (e) => {
   if (e.target.nodeName === "A") {
+    e.preventDefault();
     const sec = document.querySelector(
       `[data-nav = '${e.target.textContent}']`
     );

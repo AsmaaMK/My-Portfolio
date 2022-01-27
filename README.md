@@ -15,7 +15,7 @@ Live Site URL: [https://asmaa-mahmoud.vercel.app/](https://asmaa-mahmoud.vercel.
 - Flexbox
 - Mobile-first workflow
 - Vanilla JavaScript
-- [Formspree API](https://formspree.io/)
+- [Formspree API](https://formspree.io/) - For contact me form
 
 
 ## Author

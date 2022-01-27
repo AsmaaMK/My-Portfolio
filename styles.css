@@ -103,12 +103,17 @@ main {
 }
 
 .navbar__menu .menu__link:focus {
-  outline: var(--primary-color);
-  box-shadow: 0 0 0.5em var(--light-color);
+  outline: none;
+  border-bottom-color: var(--primary-color);
 }
 
 .navbar__menu .menu__link--active {
   color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.unfocus {
+  border-bottom-color: transparent;
 }
 
 /* Medium Screens */
@@ -272,18 +277,6 @@ h2 {
   height: calc(100vh - 10vh - 3em); /* 100vh - padding - margin */
 }
 
-.personal-image {
-  flex: 1;
-}
-
-.personal-image img {
-  width: 100%;
-}
-
-.about__intro__detail {
-  flex: 3;
-}
-
 .about__intro {
   display: flex;
   padding-left: 0.5em;
@@ -323,31 +316,35 @@ h2 {
   margin: 1.5em 0;
 }
 
-.about__info__link,
-form button {
+.btn {
   display: inline-block;
-  position: relative;
   outline: none;
-
   font-size: 1rem;
   text-decoration: none;
   font-weight: bold;
-  padding: 1em 3em 1em 1.5em;
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
 
-  box-shadow: 0px 5px 7px 0px rgb(255, 235, 204, 18%);
+.resume__link {
+  padding: 1em 3em 1em 1.5em; 
+  position: relative; 
+  margin-top: 1em;
+}
+
+.resume__link,
+.submit__btn {
+  box-shadow: 0px 5px 7px 0px rgb(255, 235, 204, 18%); 
   background-color: var(--light-color);
   color: var(--dark-color);
-  background-image: linear-gradient(
+  background-image: linear-gradient( 
     180deg,
     var(--primary-color),
     var(--light-color)
   );
-
-  transition: all 0.3s ease-in-out;
 }
 
-.about__info__link::after {
+.resume__link::after {
   content: url("../assets/icons/file_download_black_24dp.svg");
   width: 24px;
   height: 24px;
@@ -357,33 +354,54 @@ form button {
   outline: none;
 }
 
-.about__info__link:hover,
-.about__info__link:focus,
-form button:focus,
-form button:hover {
+.btn:hover,
+.btn:focus {
   transform: translateY(-2px);
+  opacity: 0.9;
 }
 
-.about__info__link:focus,
-form button:focus {
+.btn:focus {
   box-shadow: 0 0 0.5em var(--light-color);
+}
+
+.github__link,
+.linkedin__link, 
+.demo__link {
+  position: relative;
+  padding: 1em 1em 1em 3em;
+  margin-bottom: 1em;
+}
+
+.github__link {
+  background-color: #171515;
+}
+
+.linkedin__link {
+  background-color: #0077b5;
+  margin-right: 1em;
+}
+
+.github__link::before {
+  content: url("assets/logos/github.svg");
+}
+
+.linkedin__link::before {
+  content: url("assets/logos/linkedin-icon.svg");
+}
+
+.github__link::before, 
+.linkedin__link::before,
+.demo__link::before {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 0.85em;
+  left: 1em;
+  outline: none;
 }
 
 /* Medium Screens */
 @media only screen and (min-width: 700px) {
-  .about__info {
-    width: 50vw;
-  }
-
-  .about__intro__detail {
-    width: 50vw;
-  }
-
-  .personal-image {
-    position: absolute;
-    right: 5vw;
-  }
-
   .about__intro .about__greeting {
     font-size: 2.5rem;
   }
@@ -404,7 +422,7 @@ form button:focus {
     font-size: 1.5rem;
   }
 
-  .about__info__link {
+  .resume__link {
     font-size: 1rem;
   }
 }
@@ -427,6 +445,7 @@ form button:focus {
 .skill img {
   height: 100%;
   margin-right: 1em;
+  user-select: none;
 }
 
 .skill p {
@@ -434,6 +453,7 @@ form button:focus {
   color: var(--dark-color);
   font-size: 1.3rem;
   font-weight: bold;
+  user-select: none;
 }
 
 /* Medium Screens */
@@ -484,28 +504,33 @@ form button:focus {
   margin: 1em;
 }
 
-.project .project-code__link {
-  display: block;
-  width: fit-content;
-  padding: 0.6em 1em;
-  margin: 1em;
-  border-radius: 1em;
-  font-weight: bold;
-  text-decoration: none;
+.demo__link {
   background-color: var(--dark-color);
-  outline: none;
-  transition: ease 0.3s all;
+  margin-right: 1em;
 }
 
-.project-code__link:hover,
-.project-code__link:focus {
-  transform: translateY(-2px);
-  opacity: 0.9;
-  box-shadow: 0px 5px 7px 0px rgb(255, 235, 204, 25%);
+.demo__link::before {
+  content: url("assets/icons/link-solid.svg");
 }
 
-.project-code__link:focus {
+#section3 .demo__link,
+#section3 .github__link {
+  margin-left: 1em;
+  font-size: 0.9em;
+}
+
+#section3 .demo__link::before,
+#section3 .github__link::before {
+  width: 20px;
+  height: 20px;
+}
+
+#section3 .demo__link:focus {
   box-shadow: 0 0 0.5em var(--dark-color);
+}
+
+#section3 .github__link:focus {
+  box-shadow: 0 0 0.5em #171515;
 }
 
 .project .project-demo__link {
@@ -609,66 +634,22 @@ form textarea:focus {
   border-bottom-color: var(--dark-color);
 }
 
-form button {
+.submit__btn {
   width: 50%;
   max-width: 200px;
   margin: 2em auto;
   border: none;
   cursor: pointer;
-  outline: none;
-  padding: 1em !important;
+  padding: 1em;
 }
 
 /* ---- Contact Me section end ---- */
 
 /* ---- footer start ---- */
 
-footer .social-links li a img {
-  width: 100%;
-}
-
-footer .social-links li a {
-  display: block;
-  max-width: 50px;
-  max-height: 50px;
-  width: 10vw;
-  height: 10vw;
-
-  margin: 1em 1em 1em 0;
-  transition: 0.3s ease-in-out all;
-  outline: none;
-  border-radius: 50px;
-  background-color: #fff;
-}
-
-footer .social-links li a:hover,
-footer .social-links li a:focus {
-  opacity: 0.8;
-  transform: translateY(-0.2em);
-}
-
-footer .social-links li a:focus {
-  box-shadow: 0 0 0.5em var(--light-color);
-}
-
-footer .social-links {
-  display: flex;
-  list-style: none;
-  align-items: center;
-}
-
 footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 2vw;
-}
-
-@media only screen and (min-width: 700px) {
-  footer {
-    justify-content: space-between;
-  }
+  padding: 0 2vw 1.5em;
+  text-align: center;
 }
 
 /* ---- footer end ---- */

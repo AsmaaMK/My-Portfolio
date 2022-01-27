@@ -33,20 +33,6 @@
                   <h1 class="about__name"><span>I'm</span> Asmaa Mahmoud</h1>
                   <p class="about__job-title">Front-end Engineer</p>
                 </div>
-
-                <div class="personal-image">
-                  <picture>
-                    <source
-                      media="(min-width:700px)"
-                      srcset="assets/img/asmaa-2x.png"
-                    />
-                    <source
-                      media="(min-width:320px)"
-                      srcset="assets/img/asmaa-1x.png"
-                    />
-                    <img src="assets/img/asmaa-1x.png" alt="" />
-                  </picture>
-                </div>
               </div>
 
               <p class="about__description">
@@ -55,8 +41,23 @@
                 positive team member who has strong technical, communication.
               </p>
 
+              <div class="contact-links">
+                <a
+                  class="btn linkedin__link"
+                  href="https://www.linkedin.com/in/asmaa-m-khalaf-04688a18b/"
+                  target="_blank"
+                  >Linkedin</a
+                >
+                <a
+                  class="btn github__link"
+                  href="https://github.com/AsmaaMK"
+                  target="_blank"
+                  >Github</a
+                >
+              </div>
+
               <a
-                class="about__info__link"
+                class="btn resume__link"
                 href="https://drive.google.com/file/d/1ABAcOm7Ym2COuZ8qVr4MBD5z8Q0dWvZH/view?usp=sharing"
                 target="_blank"
                 >Download Resume</a
@@ -131,12 +132,22 @@
                 <img src="assets/img/project1.png" alt="project 1" />
               </a>
               <p>Clipboard Landing Page</p>
-              <a
-                href="https://github.com/AsmaaMK/Clipboard-landing-page"
-                target="_blank"
-                class="project-code__link"
-                >Code</a
-              >
+
+              <div class="project__links">
+                <a
+                  href="https://github.com/AsmaaMK/Clipboard-landing-page"
+                  target="_blank"
+                  class="btn github__link"
+                  >Github</a
+                >
+
+                <a
+                  href="https://clipboard-landing-page-amber-five.vercel.app/"
+                  target="_blank"
+                  class="btn demo__link"
+                  >Demo</a
+                >
+              </div>
             </div>
 
             <div class="project">
@@ -148,28 +159,40 @@
                 <img src="assets/img/project2.png" alt="project 2" />
               </a>
               <p>SM-Experts</p>
-              <a
-                href="https://github.com/AsmaaMK/SM-Experts"
-                target="_blank"
-                class="project-code__link"
-                >Code</a
-              >
+
+              <div class="project__links">
+                <a
+                  href="https://github.com/AsmaaMK/SM-Experts"
+                  target="_blank"
+                  class="btn github__link"
+                  >Github</a
+                >
+
+                <a
+                  href="https://responsiv-landing-page-asmaamk.vercel.app/"
+                  target="_blank"
+                  class="btn demo__link"
+                  >Demo</a
+                >
+              </div>
             </div>
 
             <div class="project">
-              <a
-                href="#"
-                class="project-demo__link"
-              >
+              <a href="#" class="project-demo__link">
                 <img src="assets/img/project3.png" alt="project 3" />
               </a>
               <p>My Portfolio</p>
-              <a
-                href="https://github.com/AsmaaMK/My-Portfolio"
-                target="_blank"
-                class="project-code__link"
-                >Code</a
-              >
+
+              <div class="project__links">
+                <a
+                  href="https://github.com/AsmaaMK/My-Portfolio"
+                  target="_blank"
+                  class="btn github__link"
+                  >Github</a
+                >
+
+                <a href="#" target="_blank" class="btn demo__link">Demo</a>
+              </div>
             </div>
 
             <div class="project">
@@ -181,12 +204,21 @@
                 <img src="assets/img/project4.png" alt="project 4" />
               </a>
               <p>Huddle landing page</p>
-              <a
-                href="https://github.com/AsmaaMK/huddle-landing-page"
-                target="_blank"
-                class="project-code__link"
-                >Code</a
-              >
+              <div class="project__links">
+                <a
+                  href="https://github.com/AsmaaMK/huddle-landing-page"
+                  target="_blank"
+                  class="btn github__link"
+                  >Github</a
+                >
+
+                <a
+                  href="https://huddle-landing-page-ivory.vercel.app/"
+                  target="_blank"
+                  class="btn demo__link"
+                  >Demo</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -203,7 +235,12 @@
                 <input type="text" id="name" name="Name" value="" required />
                 <label for="name">Name</label>
               </div>
-              <input type="text" name="Subject" value="Contact Me form" style="display: none;"/>
+              <input
+                type="text"
+                name="Subject"
+                value="Contact Me form"
+                style="display: none"
+              />
               <div class="email-field">
                 <input type="email" id="email" name="Email" value="" required />
                 <label for="email">Email</label>
@@ -217,7 +254,9 @@
                 ></textarea>
                 <label for="message">Message</label>
               </div>
-              <button id="submitbtn" type="submit">Submit</button>
+              <button class="btn submit__btn" id="submitbtn" type="submit">
+                Submit
+              </button>
             </form>
           </div>
         </div>
@@ -228,11 +267,7 @@
 
     <!-- Start Footer -->
     <footer class="page__footer">
-      <ul class="social-links">
-        <li><a href="https://www.linkedin.com/in/asmaa-m-khalaf-04688a18b/" target="_blank"><img src="assets/logos/linkedin-icon.svg" alt="linkedin"></a></li>
-        <li><a href="https://github.com/AsmaaMK" target="_blank"><img src="assets/logos/github.svg" alt="github"></a></li>
-      </ul>
-      <p>&copy 2022 Asmaa Mahmoud</p>
+      <p>&copyAsmaa Mahmoud 2022</p>
     </footer>
     <!-- End Footer -->
 
