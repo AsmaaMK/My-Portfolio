@@ -330,7 +330,6 @@ h2 {
 .resume__link {
   padding: 1em 3em 1em 1.5em;
   position: relative;
-  /* margin-top: 1em; */
 }
 
 .resume__link,
@@ -358,6 +357,7 @@ h2 {
 .contact-links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1em;
 }
 
@@ -401,6 +401,11 @@ svg path {
 
 .github:hover svg path {
   fill: #171515;
+}
+
+.contact-logos {
+  display: flex;
+  gap: 1em;
 }
 
 .btn:focus {
