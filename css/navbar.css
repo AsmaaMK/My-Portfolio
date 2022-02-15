@@ -36,8 +36,8 @@
   display: inline-block;
   color: var(--light-color);
   padding: 0.5em 0;
-  border-top: 0.2em solid transparent;
-  border-bottom: 0.2em solid transparent;
+  /* border-top: 0.2em solid transparent; */
+  /* border-bottom: 0.2em solid transparent; */
   transition: ease 0.3s all;
 }
 
@@ -54,12 +54,12 @@
 }
 
 #navbar__menu .menu__link:hover {
-  border-bottom-color: var(--primary-color);
+  /* border-bottom-color: var(--primary-color); */
 }
 
 #navbar__menu .menu__link--active {
   color: var(--primary-color);
-  border-bottom-color: var(--primary-color);
+  /* border-bottom-color: var(--primary-color); */
 }
 
 /* Medium Screens */
