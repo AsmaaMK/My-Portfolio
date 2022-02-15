@@ -151,7 +151,7 @@ navList.addEventListener("click", (e) => {
 // });
 
 /* Change the nav style when scroll */
-const nav = document.getElementById("navbar__list");
+const nav = document.getElementById("navbar__menu");
 const sectionOne = document.getElementById("section1");
 
 const sectionOneOptions = {

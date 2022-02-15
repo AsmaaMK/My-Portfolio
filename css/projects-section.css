@@ -13,7 +13,7 @@
 
 .project {
   background-color: var(--light-color);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 8px 12px rgb(0 0 0 / 4%);
+  box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.1), 0 2px 7px 2px rgba(0, 0, 0, 0.1);
   padding-bottom: 2em;
   margin: 1em;
   width: 100% - 2em;
@@ -33,7 +33,7 @@
   margin: 1em;
 }
 
-.github__link, 
+.github__link,
 .demo__link {
   position: relative;
   padding: 1em 1em 1em 3em;

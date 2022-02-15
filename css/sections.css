@@ -1,9 +1,10 @@
 /* ---- Sections General Style Start ---- */
 
 section {
+  max-width: 1600px;
   position: relative;
   padding: 3em 0;
-  margin: 3em 0;
+  margin: 3em auto;
 }
 
 section .landing__container .flex__container {
