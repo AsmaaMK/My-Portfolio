@@ -41,14 +41,20 @@
   transition: ease 0.3s all;
 }
 
-#navbar__menu .menu__link:hover,
-#navbar__menu .menu__link:focus,
-#navbar__menu .menu__link--active {
-  border-bottom-color: var(--primary-color);
-}
 
 #navbar__menu .menu__link:focus {
   outline: none;
+  box-shadow: 0 0 0.5em var(--light-color);
+  padding: 0.5em;
+}
+
+#navbar__menu .menu__link:focus:not(:focus-visible) {
+  box-shadow:none;
+  padding: 0.5em 0;
+}
+
+#navbar__menu .menu__link:hover,
+#navbar__menu .menu__link--active {
   border-bottom-color: var(--primary-color);
 }
 
