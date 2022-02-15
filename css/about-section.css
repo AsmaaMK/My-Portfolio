@@ -63,18 +63,31 @@
 
 .contact-links {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 1em;
 }
 
 .github,
 .linkedin {
-  width: 52px;
-  height: 52px;
-  padding: 0.7em;
+  width: 42px;
+  height: 42px;
+  padding: 0.5em;
   border: 3px solid;
   transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 700px) {
+  .contact-links {
+    flex-direction: row;
+  }
+  .github,
+  .linkedin {
+    width: 52px;
+    height: 52px;
+    padding: 0.7em;
+  }
 }
 
 svg path {
