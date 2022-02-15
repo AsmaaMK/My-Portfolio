@@ -1,7 +1,7 @@
 /* ---- Sections General Style Start ---- */
 
 section {
-  max-width: 1600px;
+  max-width: var(--max-width);
   position: relative;
   padding: 3em 0;
   margin: 3em auto;

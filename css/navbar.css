@@ -12,7 +12,7 @@
 #navbar__menu ul {
   width: 100%;
   height: inherit;
-  max-width: 1600px;
+  max-width: var(--max-width);
   margin: auto;
   list-style: none;
 
