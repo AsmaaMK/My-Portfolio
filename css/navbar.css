@@ -52,7 +52,7 @@
   padding: 0.5em 0;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   #navbar__menu .menu__link:hover {
     border-bottom-color: var(--primary-color);
   }
