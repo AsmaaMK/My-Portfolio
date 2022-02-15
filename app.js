@@ -137,18 +137,18 @@ navList.addEventListener("click", (e) => {
 });
 
 // hide the nav while scroll down and show it while scroll up
-window.addEventListener("scroll", function () {
-  let st = window.pageYOffset || document.documentElement.scrollTop;
-  const nav = document.getElementById("navbar__list");
+// window.addEventListener("scroll", function () {
+//   let st = window.pageYOffset || document.documentElement.scrollTop;
+//   const nav = document.getElementById("navbar__list");
 
-  if (st > lastScrollTop) {
-    nav.style.top = "-150px";
-  } else {
-    nav.style.top = "0";
-  }
+//   if (st > lastScrollTop) {
+//     nav.style.top = "-150px";
+//   } else {
+//     nav.style.top = "0";
+//   }
 
-  lastScrollTop = st <= 0 ? 0 : st;
-});
+//   lastScrollTop = st <= 0 ? 0 : st;
+// });
 
 /* Change the nav style when scroll */
 const nav = document.getElementById("navbar__list");
