@@ -1,0 +1,137 @@
+/* ---- About section start ---- */
+
+#section1 {
+  display: flex;
+  align-items: center;
+  padding: 10vh 0;
+  height: calc(100vh - 10vh - 3em); /* 100vh - padding - margin */
+}
+
+.about__intro {
+  display: flex;
+  padding-left: 0.5em;
+  border-left: var(--light-color) 0.2em solid;
+  margin-bottom: 1em;
+}
+
+.about__intro .about__greeting {
+  font-size: 7vw;
+  color: var(--primary-color);
+  line-height: 1.1;
+  width: fit-content;
+}
+
+.about__intro .about__name {
+  font-size: 10vw;
+  color: var(--light-color);
+  line-height: 1.1;
+}
+
+.about__intro .about__job-title {
+  font-size: 4vw;
+  width: fit-content;
+  padding-top: 0.2em;
+  color: var(--light-color);
+  font-weight: bold;
+}
+
+.about__name span {
+  font-size: 8vw;
+  color: var(--primary-color);
+}
+
+.about__info .about__description {
+  font-size: 4vw;
+  color: var(--light-color);
+  margin: 1.5em 0;
+}
+
+.resume__link {
+  padding: 1em 3em 1em 1.5em;
+  position: relative;
+}
+
+.resume__link::after {
+  content: url("../assets/icons/file_download_black_24dp.svg");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0.8em;
+  right: 1.3em;
+  outline: none;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.github,
+.linkedin {
+  width: 52px;
+  height: 52px;
+  padding: 0.7em;
+  border: 3px solid;
+  transition: all 0.3s ease-in-out;
+}
+
+svg path {
+  transition: fill 0.3s ease-in-out;
+}
+
+.github {
+  border-color: var(--github-color);
+}
+
+.linkedin {
+  border-color: var(--linkedin-color);
+}
+
+.github:hover,
+.linkedin:hover {
+  background-color: #ffffffaa;
+}
+
+.linkedin:hover svg path {
+  fill: var(--linkedin-color);
+}
+
+.github:hover svg path {
+  fill: var(--github-color);
+}
+
+.contact-logos {
+  display: flex;
+  gap: 1em;
+}
+
+/* Medium Screens */
+@media only screen and (min-width: 700px) {
+  .about__intro .about__greeting {
+    font-size: 2.5rem;
+  }
+
+  .about__intro .about__name {
+    font-size: 3.5rem;
+  }
+
+  .about__intro .about__job-title {
+    font-size: 1.5rem;
+  }
+
+  .about__name span {
+    font-size: 3rem;
+  }
+
+  .about__info .about__description {
+    font-size: 1.5rem;
+  }
+
+  .resume__link {
+    font-size: 1rem;
+  }
+}
+
+/* ---- About section end ---- */

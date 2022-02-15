@@ -1,0 +1,40 @@
+
+/* ---- Skills section start ---- */
+
+.skill {
+  background-color: var(--light-color);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 8px 12px rgb(0 0 0 / 4%);
+  height: 4.5em;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.skill img {
+  height: 100%;
+  margin-right: 1em;
+  user-select: none;
+}
+
+.skill p {
+  display: inline-block;
+  color: var(--dark-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* Medium Screens */
+@media only screen and (min-width: 700px) {
+  #section2 .landing__container .flex__container {
+    justify-content: space-around;
+  }
+
+  .skill {
+    min-width: 300px;
+  }
+}
+
+/* ---- Skills section end ---- */

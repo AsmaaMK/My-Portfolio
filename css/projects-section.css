@@ -1,0 +1,111 @@
+/* ---- Projects section end ---- */
+
+#section3 .landing__container .flex__container {
+  align-items: center;
+}
+
+@media only screen and (min-width: 700px) {
+  #section3 .landing__container .flex__container {
+    justify-content: space-around;
+    align-items: stretch;
+  }
+}
+
+.project {
+  background-color: var(--light-color);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 8px 12px rgb(0 0 0 / 4%);
+  padding-bottom: 2em;
+  margin: 1em;
+  width: 100% - 2em;
+  max-width: 300px;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project p {
+  color: var(--dark-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1em;
+}
+
+.github__link, 
+.demo__link {
+  position: relative;
+  padding: 1em 1em 1em 3em;
+  margin-bottom: 1em;
+}
+
+.demo__link {
+  background-color: var(--dark-color);
+  margin-right: 1em;
+}
+
+.github__link::before,
+.demo__link::before {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 0.85em;
+  left: 1em;
+  outline: none;
+}
+
+.github__link::before {
+  content: url("../assets/logos/github.svg");
+}
+
+.demo__link::before {
+  content: url("../assets/icons/link-solid.svg");
+}
+
+#section3 .demo__link,
+#section3 .github__link {
+  margin-left: 1em;
+  font-size: 0.9em;
+}
+
+#section3 .demo__link::before,
+#section3 .github__link::before {
+  width: 20px;
+  height: 20px;
+}
+
+#section3 .demo__link:focus {
+  box-shadow: 0 0 0.5em var(--dark-color);
+}
+
+#section3 .github__link:focus {
+  box-shadow: 0 0 0.5em #171515;
+}
+
+.project .project-demo__link {
+  display: block;
+  height: fit-content;
+  outline: none;
+  overflow: hidden;
+  transition: ease 0.3s all;
+  background-color: var(--dark-color);
+}
+
+.project .project-demo__link img {
+  transition: ease 0.3s all;
+
+  opacity: 0.8;
+}
+
+.project .project-demo__link:focus,
+.project .project-demo__link:hover {
+  opacity: 1;
+}
+
+.project .project-demo__link:focus img,
+.project .project-demo__link:hover img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+/* ---- Projects section end ---- */

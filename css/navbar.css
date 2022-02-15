@@ -1,0 +1,78 @@
+/* ---- Navigation Styles Start ---- */
+
+.navbar__menu ul {
+  width: 100vw;
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  transition: all 0.3s;
+}
+
+.nav-scrolled {
+  background-color: #63497cce;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 8px 12px rgb(0 0 0 / 4%);
+}
+
+.navbar__menu .menu__link {
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--light-color);
+  padding: 0.5em 0;
+  margin: 0.5em;
+  border-top: 0.2em solid transparent;
+  border-bottom: 0.2em solid transparent;
+  transition: ease 0.3s all;
+}
+
+.navbar__menu .menu__link:hover,
+.navbar__menu .menu__link:focus,
+.navbar__menu .menu__link--active {
+  border-bottom-color: var(--primary-color);
+}
+
+.navbar__menu .menu__link:focus {
+  outline: none;
+  border-bottom-color: var(--primary-color);
+}
+
+.navbar__menu .menu__link--active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.unfocus {
+  border-bottom-color: transparent;
+}
+
+/* Medium Screens */
+@media only screen and (min-width: 700px) {
+  .navbar__menu ul {
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    padding: 0 calc(2vw + 5vw - 1em); /* section padding + landing-container padding - nav link margin */
+  }
+
+  .navbar__menu .menu__link {
+    padding: 0.5em 0;
+    margin: 1em;
+  }
+}
+
+/* Tiny Screens */
+@media only screen and (max-width: 360px) {
+  .navbar__menu .menu__link {
+    font-size: 0.85em;
+  }
+}
+
+/* ---- Navigation Styles End ---- */

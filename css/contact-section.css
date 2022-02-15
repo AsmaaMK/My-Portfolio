@@ -1,0 +1,84 @@
+/* ---- Contact Me section start ---- */
+
+#section4 .flex__container {
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form textarea {
+  display: inline-block;
+  width: 100%;
+  height: 4.5em;
+  padding: 1.2em 1em 0.8em;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.25em solid var(--light-color);
+  outline: none;
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  transition: 0.3s ease-in-out all;
+}
+
+form textarea {
+  height: 10em;
+  padding: 1.8em 1.3em;
+}
+
+form .name-field,
+form .email-field,
+form .message-field {
+  width: inherit;
+  position: relative;
+  margin: 1.3em 0;
+}
+
+form label {
+  display: inline-block;
+  position: absolute;
+  top: 1.2em;
+  left: 1em;
+  cursor: unset;
+  transition: 0.3s ease-in-out all;
+}
+
+.notempty + label,
+form input:focus + label,
+form textarea:focus + label {
+  transform: scale(0.7) translate(-1em, -1.6em);
+  padding-bottom: 0.5em;
+}
+
+form input:focus + label,
+form textarea:focus + label {
+  color: var(--dark-color);
+  font-weight: bold;
+}
+
+form input:focus,
+form textarea:focus {
+  border-bottom-color: var(--dark-color);
+}
+
+.submit__btn {
+  width: 50%;
+  max-width: 200px;
+  margin: 2em auto;
+  border: none;
+  cursor: pointer;
+  padding: 1em;
+}
+
+/* ---- Contact Me section end ---- */

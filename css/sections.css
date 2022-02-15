@@ -1,0 +1,125 @@
+/* ---- Sections General Style Start ---- */
+
+section {
+  position: relative;
+  padding: 3em 0;
+  margin: 3em 0;
+}
+
+section .landing__container .flex__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 1em;
+}
+
+/* Medium Screens */
+@media only screen and (min-width: 700px) {
+  section .landing__container .flex__container {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 5vw;
+  }
+}
+
+/* Background Circles */
+
+section .landing__container::before,
+section .landing__container::after {
+  content: "";
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+  z-index: -5;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(odd) .landing__container::before {
+  width: 20vh;
+  height: 20vh;
+  top: 3em;
+  right: 3em;
+}
+
+section:nth-of-type(even) .landing__container::before {
+  width: 20vh;
+  height: 20vh;
+  top: 3em;
+  left: 3em;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+  left: 3em;
+  bottom: 3em;
+  width: 10vh;
+  height: 10vh;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+  right: 20vw;
+  bottom: -1em;
+  width: 15vh;
+  height: 15vh;
+}
+
+/* Section Active Styles */
+
+section.your-active-class {
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+section.your-active-class .landing__container::before {
+  opacity: 1;
+  animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.your-active-class .landing__container::after {
+  opacity: 1;
+  animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/* Section Active Styles Keyframe Animations */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate(-1em) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-1em) rotate(-360deg);
+  }
+}
+
+/* Sections Titles Style */
+
+h2 {
+  text-align: center;
+  margin: 1em auto;
+  font-size: 2em;
+
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* Medium Screens */
+@media only screen and (min-width: 700px) {
+  h2 {
+    font-size: 3em;
+  }
+}
+
+/* ---- Sections General Style End ---- */
