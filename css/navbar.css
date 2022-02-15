@@ -49,22 +49,17 @@
 }
 
 #navbar__menu .menu__link:focus:not(:focus-visible) {
-  box-shadow:none;
+  box-shadow: none;
   padding: 0.5em 0;
 }
 
-#navbar__menu .menu__link:hover,
-#navbar__menu .menu__link--active {
+#navbar__menu .menu__link:hover {
   border-bottom-color: var(--primary-color);
 }
 
 #navbar__menu .menu__link--active {
   color: var(--primary-color);
   border-bottom-color: var(--primary-color);
-}
-
-.unfocus {
-  border-bottom-color: transparent;
 }
 
 /* Medium Screens */

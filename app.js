@@ -99,9 +99,6 @@ onscroll = function () {
       scrollPoss >= section.offsetTop - 100 &&
       scrollPoss <= section.offsetTop - 200 + section.offsetHeight
     ) {
-      for (let anchor of anchorTags) {
-        anchor.classList.add("unfocus");
-      }
       activateSection(section);
     }
   }
