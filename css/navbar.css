@@ -41,7 +41,6 @@
   transition: ease 0.3s all;
 }
 
-
 #navbar__menu .menu__link:focus {
   outline: none;
   box-shadow: 0 0 0.5em var(--light-color);
@@ -53,8 +52,10 @@
   padding: 0.5em 0;
 }
 
-#navbar__menu .menu__link:hover {
-  border-bottom-color: var(--primary-color);
+@media (hover: hover) {
+  #navbar__menu .menu__link:hover {
+    border-bottom-color: var(--primary-color);
+  }
 }
 
 #navbar__menu .menu__link--active {
