@@ -1,0 +1,25 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "![Design preview for My Portfolio website](./assets/img/preview.png)",
+  "main": "app.js",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsmaaMK/My-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AsmaaMK/My-Portfolio/issues"
+  },
+  "homepage": "https://github.com/AsmaaMK/My-Portfolio#readme",
+  "devDependencies": {
+    "vite": "^3.1.0"
+  }
+}
