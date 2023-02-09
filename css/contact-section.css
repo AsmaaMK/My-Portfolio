@@ -33,8 +33,10 @@ form textarea {
 }
 
 form textarea {
-  height: 10em;
+  min-height: 10em;
   padding: 1.8em 1.3em;
+  resize: vertical;
+
 }
 
 form .name-field,

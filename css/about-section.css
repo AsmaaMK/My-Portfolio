@@ -70,12 +70,18 @@
 }
 
 .github,
-.linkedin {
+.linkedin,
+.stackoverflow,
+.leetcode {
   width: 46px;
   height: 46px;
   padding: 0.5em;
   border: 3px solid;
   transition: all 0.3s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (min-width: 700px) {
@@ -83,7 +89,9 @@
     flex-direction: row;
   }
   .github,
-  .linkedin {
+  .linkedin,
+  .stackoverflow,
+  .leetcode  {
     width: 52px;
     height: 52px;
     padding: 0.7em;
@@ -102,8 +110,20 @@ svg path {
   border-color: var(--linkedin-color);
 }
 
+.leetcode {
+  border-color: var(--leetcode-color);
+  background-color: var(--leetcode-color);
+}
+
+.stackoverflow {
+  border-color: var(--stackoverflow-color);
+  background-color: var(--stackoverflow-color);
+}
+
 .github:hover,
-.linkedin:hover {
+.linkedin:hover,
+.stackoverflow:hover,
+.leetcode:hover {
   background-color: #ffffffaa;
 }
 
@@ -113,6 +133,14 @@ svg path {
 
 .github:hover svg path {
   fill: var(--github-color);
+}
+
+.leetcode:hover svg path {
+  fill: var(--leetcode-color);
+}
+
+.stackoverflow:hover svg path {
+  fill: var(--stackoverflow-color);
 }
 
 .contact-logos {
